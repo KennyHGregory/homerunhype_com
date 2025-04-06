@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            margin-top: 1em;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        button {
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+        <p>This product is currently out of stock.</p>
+
+        <!-- Email Signup Form -->
+        <form action="https://example.com/subscribe" method="post">
+            <label for="email">Enter your email to be notified when available:</label><br>
+            <input type="email" name="email" id="email" placeholder="you@example.com" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</body>
+
+</html>
